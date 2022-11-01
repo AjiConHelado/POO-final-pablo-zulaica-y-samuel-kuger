@@ -9,6 +9,7 @@ public class Habitacion {
 	
 	public void MostrarPrecio()
 	{
+		String manuel="jairo";
 		
 	}
 	

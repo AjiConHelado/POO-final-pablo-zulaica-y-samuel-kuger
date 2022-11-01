@@ -9,12 +9,11 @@ public class Matrimonial extends Habitacion{
 		
 	}
 	
-	public void PrecioMatri()
+	@Override
+	public void MostrarPrecio()
 	{
 		
-	
 	}
-	
 	public void ClonarMatri()
 	{
 		
