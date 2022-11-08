@@ -25,7 +25,8 @@ public class Clientes extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-
+	public void CloseJframe(){
+	    super.dispose();}
 
 	/**
 	 * Create the frame.
@@ -43,15 +44,34 @@ public class Clientes extends JFrame {
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int i=JOptionPane.showConfirmDialog(null, "Seguro que quiere salir?");
-                if(i==0)
-                    System.exit(0);
+	            if(i==0)
+	                System.exit(0);
 			}
 		});
-		btnSalir.setBounds(292, 208, 89, 23);
+		btnSalir.setBounds(307, 210, 89, 23);
 		contentPane.add(btnSalir);
 		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					MenuRecep admframe = new MenuRecep();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
+			}
+		});
+		btnVolver.setBounds(39, 210, 89, 23);
+		contentPane.add(btnVolver);
+		
 		JButton btnGuardar = new JButton("Guardar");
-		btnGuardar.setBounds(72, 208, 89, 23);
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnGuardar.setBounds(175, 210, 89, 23);
 		contentPane.add(btnGuardar);
 		
 		textNombre = new JTextField();

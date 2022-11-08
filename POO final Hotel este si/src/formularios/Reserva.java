@@ -28,7 +28,8 @@ public class Reserva extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-
+	public void CloseJframe(){
+	    super.dispose();}
 
 	/**
 	 * Create the frame.
@@ -46,16 +47,39 @@ public class Reserva extends JFrame {
 		lblReserva.setBounds(171, 11, 121, 14);
 		contentPane.add(lblReserva);
 		
-		JButton btnNewButton = new JButton("Salir");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnSalir = new JButton("Salir");
+		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int i=JOptionPane.showConfirmDialog(null, "Seguro que quiere salir?");
-                if(i==0)
-                    System.exit(0);
+	            if(i==0)
+	                System.exit(0);
 			}
 		});
-		btnNewButton.setBounds(237, 215, 137, 23);
-		contentPane.add(btnNewButton);
+		btnSalir.setBounds(307, 210, 89, 23);
+		contentPane.add(btnSalir);
+		
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					MenuRecep admframe = new MenuRecep();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
+			}
+		});
+		btnVolver.setBounds(39, 210, 89, 23);
+		contentPane.add(btnVolver);
+		
+		JButton btnGuardar = new JButton("Generar");
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnGuardar.setBounds(175, 210, 89, 23);
+		contentPane.add(btnGuardar);
 		
 		JLabel lblNombre = new JLabel("Nombre:");
 		lblNombre.setBounds(32, 45, 60, 14);
@@ -80,10 +104,6 @@ public class Reserva extends JFrame {
 		JLabel lblFecha = new JLabel("Fecha reserva");
 		lblFecha.setBounds(32, 145, 107, 14);
 		contentPane.add(lblFecha);
-		
-		JButton btnNewButton_1 = new JButton("Generar reserva");
-		btnNewButton_1.setBounds(64, 215, 137, 23);
-		contentPane.add(btnNewButton_1);
 		
 		textNombre = new JTextField();
 		textNombre.setBounds(181, 42, 137, 20);

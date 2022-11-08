@@ -44,14 +44,28 @@ public class MenuRecep extends JFrame {
 		JButton btnVer = new JButton("Ver habitaciones");
 		btnVer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					HabDisp admframe = new HabDisp();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
 			}
 		});
 		btnVer.setBounds(36, 103, 173, 23);
 		contentPane.add(btnVer);
 		
-		JButton btnPrecioHabitaciones = new JButton("Consultar precio habitaciones");
+		JButton btnPrecioHabitaciones = new JButton("Precio habitaciones");
 		btnPrecioHabitaciones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					PrecioActual admframe = new PrecioActual();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
 			}
 		});
 		btnPrecioHabitaciones.setBounds(36, 137, 173, 23);
@@ -60,22 +74,43 @@ public class MenuRecep extends JFrame {
 		JButton btnPrecioTotal = new JButton("Consultar precio total ");
 		btnPrecioTotal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					PrecioTotal admframe = new PrecioTotal();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
 			}
 		});
 		btnPrecioTotal.setBounds(36, 171, 173, 23);
 		contentPane.add(btnPrecioTotal);
 		
-		JButton btnMostrarF = new JButton("Mostrar foto Habitacion");
-		btnMostrarF.addActionListener(new ActionListener() {
+		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					frmMenupp admframe = new frmMenupp();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
 			}
 		});
-		btnMostrarF.setBounds(36, 205, 173, 23);
-		contentPane.add(btnMostrarF);
+		btnVolver.setBounds(36, 205, 173, 23);
+		contentPane.add(btnVolver);
 		
-		JButton btnConsulta = new JButton("Consultar descuento cliente");
+		JButton btnConsulta = new JButton("Consultar descuento");
 		btnConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					DescCli admframe = new DescCli();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+			}
 			}
 		});
 		btnConsulta.setBounds(227, 103, 173, 23);
@@ -95,6 +130,13 @@ public class MenuRecep extends JFrame {
 		JButton btnEliminar = new JButton("Eliminar reserva");
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					EliminReserv admframe = new EliminReserv();
+					admframe.setVisible(true);
+					 CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();
+				}
 			}
 		});
 		btnEliminar.setBounds(227, 171, 173, 23);
@@ -111,16 +153,32 @@ public class MenuRecep extends JFrame {
 		btnSalir.setBounds(227, 205, 173, 23);
 		contentPane.add(btnSalir);
 		
-		JButton btnRegristro = new JButton("Registrar cliente");
-		btnRegristro.addActionListener(new ActionListener() {
+		JButton btnConsultar = new JButton("Registrar cliente");
+		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Clientes frame = new Clientes();
 				frame.setVisible(true);
 				CloseJframe();
 			}
 		});
-		btnRegristro.setBounds(130, 69, 173, 23);
-		contentPane.add(btnRegristro);
+		
+		btnConsultar.setBounds(227, 69, 173, 23);
+		contentPane.add(btnConsultar);
+		
+		JButton btnMostrar = new JButton("Mostrar Fotos");
+		btnMostrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try { 
+					MenuFotos admframe = new MenuFotos();
+					admframe.setVisible(true);
+					CloseJframe();
+				} catch (Exception h) {
+					h.printStackTrace();					
+				}
+			}
+		});
+		btnMostrar.setBounds(36, 69, 173, 23);
+		contentPane.add(btnMostrar);
 	}
 
 }

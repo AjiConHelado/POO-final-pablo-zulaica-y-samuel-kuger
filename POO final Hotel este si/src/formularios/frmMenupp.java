@@ -36,7 +36,7 @@ public class frmMenupp extends JFrame {
 
 		setContentPane(contentPane);
 		
-		JButton btnempleado = new JButton("empleado");
+		JButton btnempleado = new JButton("Recepcionista");
 		btnempleado.setBounds(62, 157, 89, 23);
 		btnempleado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -53,7 +53,7 @@ public class frmMenupp extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.add(btnempleado);
 		
-		JButton btnadmin = new JButton("admin");
+		JButton btnadmin = new JButton("Administrador");
 		btnadmin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -68,7 +68,7 @@ public class frmMenupp extends JFrame {
 		btnadmin.setBounds(265, 157, 89, 23);
 		contentPane.add(btnadmin);
 		
-		JLabel lblNewLabel = new JLabel("selecciona tu signo sodiacal");
+		JLabel lblNewLabel = new JLabel("SELECCIONE SU TIPO DE USUARIO");
 		lblNewLabel.setBounds(62, 76, 292, 31);
 		contentPane.add(lblNewLabel);
 	}

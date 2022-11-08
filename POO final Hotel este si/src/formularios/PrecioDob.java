@@ -1,21 +1,21 @@
 package formularios;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.border.EmptyBorder;
 
-public class CambiarDesc extends JFrame {
+public class PrecioDob extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textNuevoD;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -24,7 +24,7 @@ public class CambiarDesc extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CambiarDesc frame = new CambiarDesc();
+					PrecioDob frame = new PrecioDob();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,10 +34,11 @@ public class CambiarDesc extends JFrame {
 	}
 	public void CloseJframe(){
 	    super.dispose();}
+	
 	/**
 	 * Create the frame.
 	 */
-	public CambiarDesc() {
+	public PrecioDob() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -46,26 +47,21 @@ public class CambiarDesc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblDesc = new JLabel("Cambio de descuento");
-		lblDesc.setBounds(147, 11, 146, 14);
-		contentPane.add(lblDesc);
+		JLabel lblTitulo = new JLabel("Cambiar precio Habitacion Doble:");
+		lblTitulo.setBounds(134, 22, 223, 14);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblActual = new JLabel("El descuento actual es:");
-		lblActual.setBounds(32, 92, 179, 14);
+		JLabel lblActual = new JLabel("El precio actual es:");
+		lblActual.setBounds(51, 94, 114, 14);
 		contentPane.add(lblActual);
 		
-		JLabel lblPorcentaje = new JLabel("");
-		lblPorcentaje.setBounds(220, 92, 87, 14);
-		contentPane.add(lblPorcentaje);
-		
-		JLabel lblNuevo = new JLabel("El nuevo descuento sera:");
-		lblNuevo.setBounds(32, 131, 179, 14);
+		JLabel lblNuevo = new JLabel("Nuevo precio:");
+		lblNuevo.setBounds(51, 137, 114, 14);
 		contentPane.add(lblNuevo);
 		
-		textNuevoD = new JTextField();
-		textNuevoD.setBounds(221, 128, 86, 20);
-		contentPane.add(textNuevoD);
-		textNuevoD.setColumns(10);
+		JLabel lblPrecio = new JLabel("");
+		lblPrecio.setBounds(199, 94, 144, 14);
+		contentPane.add(lblPrecio);
 		
 		JButton btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
@@ -82,7 +78,7 @@ public class CambiarDesc extends JFrame {
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					frmadmin admframe = new frmadmin();
+					PrecioHabi admframe = new PrecioHabi();
 					admframe.setVisible(true);
 					 CloseJframe();
 				} catch (Exception h) {
@@ -93,6 +89,11 @@ public class CambiarDesc extends JFrame {
 		btnVolver.setBounds(39, 210, 89, 23);
 		contentPane.add(btnVolver);
 		
+		textField = new JTextField();
+		textField.setBounds(175, 134, 105, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -101,4 +102,7 @@ public class CambiarDesc extends JFrame {
 		btnGuardar.setBounds(175, 210, 89, 23);
 		contentPane.add(btnGuardar);
 	}
-}
+
+	}
+
+

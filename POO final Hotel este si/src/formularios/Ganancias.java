@@ -1,21 +1,20 @@
 package formularios;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class CambiarDesc extends JFrame {
+public class Ganancias extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textNuevoD;
 
 	/**
 	 * Launch the application.
@@ -24,7 +23,7 @@ public class CambiarDesc extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CambiarDesc frame = new CambiarDesc();
+					Ganancias frame = new Ganancias();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,7 +36,7 @@ public class CambiarDesc extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public CambiarDesc() {
+	public Ganancias() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -46,27 +45,10 @@ public class CambiarDesc extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblDesc = new JLabel("Cambio de descuento");
-		lblDesc.setBounds(147, 11, 146, 14);
-		contentPane.add(lblDesc);
-		
-		JLabel lblActual = new JLabel("El descuento actual es:");
-		lblActual.setBounds(32, 92, 179, 14);
-		contentPane.add(lblActual);
-		
-		JLabel lblPorcentaje = new JLabel("");
-		lblPorcentaje.setBounds(220, 92, 87, 14);
-		contentPane.add(lblPorcentaje);
-		
-		JLabel lblNuevo = new JLabel("El nuevo descuento sera:");
-		lblNuevo.setBounds(32, 131, 179, 14);
-		contentPane.add(lblNuevo);
-		
-		textNuevoD = new JTextField();
-		textNuevoD.setBounds(221, 128, 86, 20);
-		contentPane.add(textNuevoD);
-		textNuevoD.setColumns(10);
-		
+		JLabel lblTitulos = new JLabel("Ganancias actuales");
+		lblTitulos.setBounds(159, 11, 121, 14);
+		contentPane.add(lblTitulos);
+
 		JButton btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -93,12 +75,17 @@ public class CambiarDesc extends JFrame {
 		btnVolver.setBounds(39, 210, 89, 23);
 		contentPane.add(btnVolver);
 		
-		JButton btnGuardar = new JButton("Guardar");
-		btnGuardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnGuardar.setBounds(175, 210, 89, 23);
-		contentPane.add(btnGuardar);
+		JLabel lblPiso1 = new JLabel("Las ganancias luego de las");
+		lblPiso1.setBounds(142, 69, 157, 14);
+		contentPane.add(lblPiso1);
+		
+		JLabel lblPiso2 = new JLabel("reservaciones realizadas son:");
+		lblPiso2.setBounds(136, 86, 174, 14);
+		contentPane.add(lblPiso2);
+		
+		JLabel lblCalculo = new JLabel("");
+		lblCalculo.setBounds(172, 134, 64, 14);
+		contentPane.add(lblCalculo);
 	}
+
 }
