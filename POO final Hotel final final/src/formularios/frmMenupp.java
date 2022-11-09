@@ -37,7 +37,7 @@ public class frmMenupp extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnempleado = new JButton("Recepcionista");
-		btnempleado.setBounds(62, 157, 89, 23);
+		btnempleado.setBounds(62, 157, 141, 23);
 		btnempleado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -65,11 +65,11 @@ public class frmMenupp extends JFrame {
 				}
 			}
 		});
-		btnadmin.setBounds(265, 157, 89, 23);
+		btnadmin.setBounds(238, 157, 141, 23);
 		contentPane.add(btnadmin);
 		
 		JLabel lblNewLabel = new JLabel("SELECCIONE SU TIPO DE USUARIO");
-		lblNewLabel.setBounds(62, 76, 292, 31);
+		lblNewLabel.setBounds(132, 78, 292, 31);
 		contentPane.add(lblNewLabel);
 	}
 }
